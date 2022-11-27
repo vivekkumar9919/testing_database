@@ -67,8 +67,8 @@ const product_delete = async (req, res) => {
     try {
         const removeProduct = await Product.findByIdAndDelete(req.params.productId);
         res.json(removeProduct);
-      } catch (error) {
-        res.json({ message: error });
+      } catch (err) {
+        res.json({ message: err });
       }
 }
 
