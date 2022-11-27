@@ -2,6 +2,7 @@ const express =require('express');
 const dotenv=require('dotenv');
 const mongoose =require('mongoose')
 const cors=require("cors")
+const PORT = process.env.PORT || 3030;
 
 dotenv.config();
 
@@ -32,6 +33,6 @@ app.use("/api/products",productRoutes)
 
 
 
-app.listen(4000,()=>{
+app.listen(PORT,()=>{
     console.log(`Server started  at port 4000`);
 })
